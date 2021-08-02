@@ -1,0 +1,146 @@
+body {
+  background: #90aeb5;
+}
+
+.grid {
+  flex-direction: row;
+  display: flex;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  box-shadow: 12px 12px 12px 0 rgba(0, 0, 0, 0.2),
+    -12px -12px 18px 0 rgba(255, 255, 255, 0.35);
+  border-radius: 22px;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.gradient-1 {
+  background: linear-gradient(-30deg, #556270, #c44d58, #9b4ca7, #fa715f);
+  background-size: 500% 500%;
+  animation: gradient 5s ease-in-out infinite;
+}
+
+.gradient-2 {
+  background: radial-gradient(#e66465 20%, #9b4ca7, transparent);
+  background-size: 400% 400%;
+  animation: gradient-2 5s ease-in-out infinite;
+}
+
+.gradient-2-inner {
+  background: linear-gradient(
+    -30deg,
+    rgba(238, 119, 82, 0.5),
+    rgba(231, 60, 126, 0.5),
+    rgba(35, 166, 213, 0.5)
+  );
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+}
+
+.gradient-3 {
+  background: linear-gradient(
+    -30deg,
+    rgba(238, 119, 82, 1) 3%,
+    rgba(231, 60, 126, 1) 20%,
+    rgba(35, 166, 213, 1)
+  );
+  background-size: 200% 100%;
+  position: relative;
+  animation: gradient 5s ease-in-out infinite;
+}
+
+.gradient-3-inner {
+  background: radial-gradient(
+    rgba(101, 60, 126, 0.3) 5%,
+    rgba(131, 40, 126, 0.1) 15%,
+    transparent 25%
+  );
+  background-size: 300% 300%;
+  animation: gradient-3-1 15s ease infinite;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+}
+
+.gradient-3-inner-2 {
+  background: radial-gradient(
+    rgba(101, 60, 126, 0.3) 5%,
+    rgba(131, 40, 126, 0.1) 20%,
+    transparent 30%
+  );
+  position: absolute;
+  top: 0;
+  background-size: 300% 300%;
+  animation: gradient-3-2 15s ease infinite;
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient-2 {
+  0% {
+    background-position: 20% 80%;
+  }
+  30% {
+    background-position: 0% 60%;
+  }
+  60% {
+    background-position: 10% 50%;
+  }
+  100% {
+    background-position: 20% 80%;
+  }
+}
+
+@keyframes gradient-3-1 {
+  0% {
+    background-position: 20% 40%;
+  }
+  25% {
+    background-position: 80% 60%;
+  }
+  50% {
+    background-position: 80% 40%;
+  }
+  75% {
+    background-position: 20% 60%;
+  }
+  100% {
+    background-position: 20% 40%;
+  }
+}
+
+@keyframes gradient-3-2 {
+  0% {
+    background-position: 20% 60%;
+  }
+  25% {
+    background-position: 80% 40%;
+  }
+  50% {
+    background-position: 80% 60%;
+  }
+  75% {
+    background-position: 20% 40%;
+  }
+  100% {
+    background-position: 20% 60%;
+  }
+}
